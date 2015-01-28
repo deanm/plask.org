@@ -1,0 +1,2498 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Plask v3 Documentation</title>
+  <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+  <style>
+    body {
+      font-family: 'Droid Sans', sans-serif;
+      font-size: 0.9375em;
+      line-height: 1.4667em;
+      color: #222;
+      background: #e7e7e7;
+      margin: 0; padding: 0;
+    }
+    a {
+      color: #0050c0;
+      text-decoration: underline;
+    }
+    a:visited {
+      color: #b950b7;
+      text-decoration: underline;
+    }
+    a:hover, a:focus {
+      text-decoration: none;
+    }
+
+    p {
+      margin: 0 0 1.4667em 0;
+      position: relative;
+      text-rendering: optimizeLegibility;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: #000;
+      position: relative;
+      margin-bottom: 0.3em;
+    }
+
+    h1 {
+      font-size: 2.55em;
+      line-height: 1.375em;
+    }
+
+    pre, tt, code {
+      font-size: 0.95em;
+      line-height: 1.5438em;
+      font-family: 'Droid Sans Mono', Monaco, Consolas, "Lucida Console", monospace;
+      margin: 0; padding: 0;
+    }
+
+    pre {
+      padding: 2em 1.6em 2em 1.2em;
+      vertical-align: top;
+      background: #f8f8f8;
+      border: 1px solid #e8e8e8;
+      border-width: 1px 1px 1px 6px;
+      margin: -0.5em 0 1.1em;
+    }
+
+    #container {
+      position: relative;
+      padding: 6em;
+      padding-top: 0;
+      max-width: 50em;
+      text-align: left;
+    }
+
+    #container header {
+      margin: 1.25em -0.5em 1.3em;
+      padding: 0 0.5em 0.225em;
+    }
+
+    hr {
+      background: none;
+      border: medium none;
+      border-bottom: 1px solid #ccc;
+      margin: 5em 0 2em;
+    }
+
+    #container header hr {
+      margin: 0;
+      padding: 0;
+    }
+
+    p tt, p code {
+      background: #f8f8ff;
+      padding: 0 0.2em;
+    }
+
+    pre.proto {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      margin-bottom: 1em;
+      background-color: transparent;
+    }
+    span.gllink {
+      margin-left: 0.5em;
+      font-size: 0.5em;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <header>
+      <h1>Plask v3 Reference Documentation</h1>
+      <hr />
+    </header>
+
+<h1>AVPlayer</h1>
+<h3>AVPlayer</h3>
+<div class="fbody">
+
+<pre class="proto"><code>new AVPlayer(NSOpenGLContext? gl)</code></pre>
+
+<p>Create a new instance of an AVPlayer.  For video playback a <code>gl</code> context
+must be specified for the creation of textures.  For audio only playback
+the context argument can be omitted.</p>
+</div>
+<h3>appendFile<span class="gllink">[<a href="https://developer.apple.com/library/mac/documentation/AVFoundation/Reference/AVPlayer_Class/index.html#//apple_ref/occ/instm/AVPlayer/appendFile">AVPlayer</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void appendFile(string path)</code></pre>
+
+<p>Add a file to the playlist.</p>
+</div>
+<h3>appendURL<span class="gllink">[<a href="https://developer.apple.com/library/mac/documentation/AVFoundation/Reference/AVPlayer_Class/index.html#//apple_ref/occ/instm/AVPlayer/appendURL">AVPlayer</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void appendURL(string url)</code></pre>
+
+<p>Add a URL to the playlist.</p>
+</div>
+<h3>currentFrameTexture<span class="gllink">[<a href="https://developer.apple.com/library/mac/documentation/AVFoundation/Reference/AVPlayer_Class/index.html#//apple_ref/occ/instm/AVPlayer/currentFrameTexture">AVPlayer</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>object currentFrameTexture()</code></pre>
+</div>
+<h3>currentLoadedTimeRanges<span class="gllink">[<a href="https://developer.apple.com/library/mac/documentation/AVFoundation/Reference/AVPlayer_Class/index.html#//apple_ref/occ/instm/AVPlayer/currentLoadedTimeRanges">AVPlayer</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>float[ ] currentLoadedTimeRanges()</code></pre>
+</div>
+<h3>currentTime<span class="gllink">[<a href="https://developer.apple.com/library/mac/documentation/AVFoundation/Reference/AVPlayer_Class/index.html#//apple_ref/occ/instm/AVPlayer/currentTime">AVPlayer</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>float currentTime()</code></pre>
+</div>
+<h3>error<span class="gllink">[<a href="https://developer.apple.com/library/mac/documentation/AVFoundation/Reference/AVPlayer_Class/index.html#//apple_ref/occ/instm/AVPlayer/error">AVPlayer</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>int error()</code></pre>
+</div>
+<h3>play<span class="gllink">[<a href="https://developer.apple.com/library/mac/documentation/AVFoundation/Reference/AVPlayer_Class/index.html#//apple_ref/occ/instm/AVPlayer/play">AVPlayer</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void play()</code></pre>
+</div>
+<h3>playNext<span class="gllink">[<a href="https://developer.apple.com/library/mac/documentation/AVFoundation/Reference/AVPlayer_Class/index.html#//apple_ref/occ/instm/AVPlayer/playNext">AVPlayer</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void playNext()</code></pre>
+
+<p>Play the next entry in the playlist.</p>
+</div>
+<h3>prerollAtRate<span class="gllink">[<a href="https://developer.apple.com/library/mac/documentation/AVFoundation/Reference/AVPlayer_Class/index.html#//apple_ref/occ/instm/AVPlayer/prerollAtRate">AVPlayer</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>bool prerollAtRate(float rate)</code></pre>
+</div>
+<h3>rate<span class="gllink">[<a href="https://developer.apple.com/library/mac/documentation/AVFoundation/Reference/AVPlayer_Class/index.html#//apple_ref/occ/instm/AVPlayer/rate">AVPlayer</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>float rate()</code></pre>
+
+<p>Return the current playback rate.</p>
+</div>
+<h3>removeAll<span class="gllink">[<a href="https://developer.apple.com/library/mac/documentation/AVFoundation/Reference/AVPlayer_Class/index.html#//apple_ref/occ/instm/AVPlayer/removeAll">AVPlayer</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void removeAll()</code></pre>
+
+<p>Remove all entries from the playlist.</p>
+</div>
+<h3>seekToTime<span class="gllink">[<a href="https://developer.apple.com/library/mac/documentation/AVFoundation/Reference/AVPlayer_Class/index.html#//apple_ref/occ/instm/AVPlayer/seekToTime">AVPlayer</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void seekToTime(float secs)</code></pre>
+</div>
+<h3>setLoops<span class="gllink">[<a href="https://developer.apple.com/library/mac/documentation/AVFoundation/Reference/AVPlayer_Class/index.html#//apple_ref/occ/instm/AVPlayer/loops">AVPlayer</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void setLoops(bool loops)</code></pre>
+
+<p>Set whether or not the playlist loops.</p>
+</div>
+<h3>setRate<span class="gllink">[<a href="https://developer.apple.com/library/mac/documentation/AVFoundation/Reference/AVPlayer_Class/index.html#//apple_ref/occ/instm/AVPlayer/rate">AVPlayer</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void setRate(float rate)</code></pre>
+
+<p>Set the current playback rate.</p>
+</div>
+<h3>setVolume<span class="gllink">[<a href="https://developer.apple.com/library/mac/documentation/AVFoundation/Reference/AVPlayer_Class/index.html#//apple_ref/occ/instm/AVPlayer/volume">AVPlayer</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void setVolume(float vol)</code></pre>
+
+<p>Set the audio volume.</p>
+</div>
+<h3>status<span class="gllink">[<a href="https://developer.apple.com/library/mac/documentation/AVFoundation/Reference/AVPlayer_Class/index.html#//apple_ref/occ/instm/AVPlayer/status">AVPlayer</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>string status()</code></pre>
+</div>
+<h3>volume<span class="gllink">[<a href="https://developer.apple.com/library/mac/documentation/AVFoundation/Reference/AVPlayer_Class/index.html#//apple_ref/occ/instm/AVPlayer/volume">AVPlayer</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>float volume()</code></pre>
+
+<p>Return the current audio volume setting.</p>
+</div>
+<h1>gl.MagicProgram</h1>
+<h3>MagicProgram</h3>
+<div class="fbody">
+
+<pre class="proto"><code>new MagicProgram(gl, program)</code></pre>
+
+<p>Create a MagicProgram object, which is a wrapper around a GLSL program to
+make it easier to access uniforms and attribs.</p>
+</div>
+<h3>createFromBasename</h3>
+<div class="fbody">
+
+<pre class="proto"><code>static MagicProgram createFromBasename(gl, directory, base)</code></pre>
+
+<p>Create a new MagicProgram from the vertex shader source in file
+<code>base</code>.vshader and the fragment shader source in file <code>base</code>.fshader in the
+directory <code>directory</code>.</p>
+
+<pre><code>// Creates a magic program from myshader.vshader and myshader.fshader in
+// the same directory as the running source JavaScript file.
+var mp = MagicProgram.createFromBasename(gl, __dirname, 'myshader');</code></pre>
+</div>
+<h3>createFromFiles</h3>
+<div class="fbody">
+
+<pre class="proto"><code>static MagicProgram createFromFiles(gl, vfilename, ffilename)</code></pre>
+
+<p>Create a new MagicProgram from the vertex shader source in file <code>vfilename</code>
+and the fragment shader source in file <code>ffilename</code>.</p>
+</div>
+<h3>createFromStrings</h3>
+<div class="fbody">
+
+<pre class="proto"><code>static MagicProgram createFromStrings(gl, string vstr, string fstr)</code></pre>
+
+<p>Create a new MagicProgram from the vertex shader source string <code>vstr</code> and
+the fragment shader source string <code>fstr</code>.</p>
+</div>
+<h3>use</h3>
+<div class="fbody">
+</div>
+<h1>Mat3</h1>
+<h3>Mat3</h3>
+<div class="fbody">
+
+<pre class="proto"><code>new Mat3()</code></pre>
+
+<p>Constructs an identity matrix.</p>
+
+<p>Mat3 represents an 3x3 matrix.  The elements are, using mathematical notation
+numbered starting from 1 as aij, where i is the row and j is the column:</p>
+
+<pre><code>a11 a12 a13
+a21 a22 a23
+a31 a32 a33</code></pre>
+
+<p>Almost all operations are multiplies to the current matrix, and happen in
+place.  You can use <code>dup</code> to return a copy.  Most operations return this to
+support chaining.</p>
+
+<p>It is common to use <code>toFloat32Array</code> to get a Float32Array in OpenGL (column
+major) memory ordering.  NOTE: The code tries to be explicit about whether
+things are row major or column major, but remember that GLSL works in
+column major ordering, and this code generally uses row major ordering.</p>
+</div>
+<h3>adjoint</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this adjoint()</code></pre>
+
+<p>Reference: http://en.wikipedia.org/wiki/Adjugate_matrix</p>
+</div>
+<h3>debugString</h3>
+<div class="fbody">
+</div>
+<h3>determinant</h3>
+<div class="fbody">
+
+<pre class="proto"><code>float determinant()</code></pre>
+</div>
+<h3>dup</h3>
+<div class="fbody">
+
+<pre class="proto"><code>Mat3 dup()</code></pre>
+
+<p>Return a new copy of the matrix.</p>
+</div>
+<h3>invert</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this invert()</code></pre>
+
+<p>Invert the matrix.  The matrix must be invertible.</p>
+</div>
+<h3>mul</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this mul(Mat3 b)</code></pre>
+
+<p>Matrix multiply this = this * b</p>
+</div>
+<h3>mul2</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this mul2(Mat3 a, Mat3 b)</code></pre>
+
+<p>Matrix multiply this = a * b</p>
+</div>
+<h3>mulVec2</h3>
+<div class="fbody">
+
+<pre class="proto"><code>Vec2 mulVec2(Vec2 v)</code></pre>
+
+<p>Multiply Vec2 <code>v</code> by the current matrix, returning a Vec2 of <code>this * v</code>.
+Ignores perspective (only applies scale and translation).</p>
+</div>
+<h3>mulVec2p</h3>
+<div class="fbody">
+
+<pre class="proto"><code>Vec2 mulVec2p(Vec2 v)</code></pre>
+
+<p>Multiply Vec2 <code>v</code> by the current matrix and perform a perspective divide.
+Implies that the missing z component of <code>v</code> would be 1.</p>
+</div>
+<h3>mulVec3</h3>
+<div class="fbody">
+
+<pre class="proto"><code>Vec3 mulVec3(Vec3 v)</code></pre>
+
+<p>Multiply Vec3 <code>v</code> by the current matrix, returning a Vec3 of <code>this * v</code>.</p>
+</div>
+<h3>negate</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this negate()</code></pre>
+</div>
+<h3>pmapQuadQuad</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this pmapQuadQuad(x0, y0, x1, y1, x2, y2, x3, y3,
+                  u0, v0, u1, v1, u2, v2, u3, v3)</code></pre>
+
+<p>Overwrite <code>this</code> with a matrix that maps from (x0,y0) .. (x3,y3) to
+(u0,v0) .. (u3,v3).  NOTE: This is sensitive to the coordinate ordering,
+they should follow the pattern as <code>pmapSquareQuad</code>.</p>
+
+<p>Reference: Paul Heckbert "Fundamentals of Texture Mapping and Image Warping"</p>
+</div>
+<h3>pmapSquareQuad</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this pmapSquareQuad(x0, y0, x1, y1, x2, y2, x3, y3)</code></pre>
+
+<p>Find mapping between (0, 0), (1, 0), (1, 1), (0, 1) to (x0,y0) .. (x3, y3).</p>
+</div>
+<h3>reset</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this reset()</code></pre>
+
+<p>Reset to the identity matrix.</p>
+</div>
+<h3>set3x3r</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this set3x3r(a11, a12, a13, a21, a22, a23, a31, a32, a33)</code></pre>
+
+<p>Set the full 9 elements of the 3x3 matrix, arguments in row major order.
+The elements are specified in row major order.</p>
+</div>
+<h3>toFloat32Array</h3>
+<div class="fbody">
+
+<pre class="proto"><code>Float32Array toFloat32Array()</code></pre>
+
+<p>Return a Float32Array in suitable column major order for WebGL.</p>
+</div>
+<h3>transpose</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this transpose()</code></pre>
+
+<p>Transpose the matrix, rows become columns and columns become rows.</p>
+</div>
+<h1>Mat4</h1>
+<h3>Mat4</h3>
+<div class="fbody">
+
+<pre class="proto"><code>new Mat4()</code></pre>
+
+<p>Constructs an identity matrix.</p>
+
+<p>Mat4 represents an 4x4 matrix.  The elements are, using mathematical notation
+numbered starting from 1 as aij, where i is the row and j is the column:</p>
+
+<pre><code>a11 a12 a13 a14
+a21 a22 a23 a24
+a31 a32 a33 a34
+a41 a42 a43 a44</code></pre>
+
+<p>Almost all operations are multiplies to the current matrix, and happen in
+place.  You can use <code>dup</code> to return a copy.  Most operations return this to
+support chaining.</p>
+
+<p>It is common to use <code>toFloat32Array</code> to get a Float32Array in OpenGL (column
+major) memory ordering.  NOTE: The code tries to be explicit about whether
+things are row major or column major, but remember that GLSL works in
+column major ordering, and this code generally uses row major ordering.</p>
+</div>
+<h3>debugString</h3>
+<div class="fbody">
+</div>
+<h3>dup</h3>
+<div class="fbody">
+
+<pre class="proto"><code>Mat4 dup()</code></pre>
+
+<p>Return a new copy of the matrix.</p>
+</div>
+<h3>frustum</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this frustum(l, r, b, t, n, f)</code></pre>
+
+<p>Multiply by a frustum matrix computed from left, right, bottom, top,
+near, and far.</p>
+</div>
+<h3>invert</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this invert()</code></pre>
+
+<p>Invert the matrix.  The matrix must be invertible.</p>
+</div>
+<h3>lookAt</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this lookAt(ex, ey, ez, cx, cy, cz, ux, uy, uz)</code></pre>
+
+<p>Multiply by a look at matrix, computed from the eye, center, and up points.</p>
+</div>
+<h3>mul</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this mul(b)</code></pre>
+
+<p>Matrix multiply <code>this = this * b</code></p>
+</div>
+<h3>mul2</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this mul2(a, b)</code></pre>
+
+<p>Matrix multiply <code>this = a * b</code></p>
+</div>
+<h3>mul4x4r</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this mul4x4r(b11, b12, b13, b14, b21, b22, b23, b24,
+             b31, b32, b33, b34, b41, b42, b43, b44)</code></pre>
+
+<p>Multiply the current matrix by 16 elements that would compose a Mat4
+object, but saving on creating the object.  this = this * b.
+The elements are specified in row major order.</p>
+</div>
+<h3>mulVec3</h3>
+<div class="fbody">
+
+<pre class="proto"><code>Vec3 mulVec3(Vec3 v)</code></pre>
+
+<p>Multiply Vec3 <code>v</code> by the current matrix, returning a Vec3 of this * v.</p>
+</div>
+<h3>mulVec3p</h3>
+<div class="fbody">
+
+<pre class="proto"><code>Vec3 mulVec3p(Vec3 v)</code></pre>
+
+<p>Multiply Vec3 <code>v</code> by the current matrix, returning a Vec3 of this * v.
+Performs the perspective divide by <code>w</code>.</p>
+</div>
+<h3>mulVec4</h3>
+<div class="fbody">
+
+<pre class="proto"><code>Vec4 mulVec4(Vec4 v)</code></pre>
+
+<p>Multiply Vec4 <code>v</code> by the current matrix, returning a Vec4 of this * v.</p>
+</div>
+<h3>ortho</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this ortho(l, r, b, t, n, f)</code></pre>
+
+<p>Multiply by a orthographic matrix, computed from the clipping planes.</p>
+</div>
+<h3>perspective</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this perspective(fovy, aspect, znear, zfar)</code></pre>
+
+<p>Multiply by a perspective matrix, computed from the field of view, aspect
+ratio, and the z near and far planes.</p>
+</div>
+<h3>reset</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this reset()</code></pre>
+
+<p>Reset to the identity matrix.</p>
+</div>
+<h3>rotate</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this rotate(theta, x, y, z)</code></pre>
+
+<p>IN RADIANS, not in degrees like OpenGL.  Rotate about x, y, z.
+The caller must supply x, y, z as a unit vector.</p>
+</div>
+<h3>scale</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this scale(x, y, z)</code></pre>
+
+<p>Multiply by a scale of x, y, and z.</p>
+</div>
+<h3>set4x4r</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this set4x4r(a11, a12, a13, a14, a21, a22, a23, a24,
+             a31, a32, a33, a34, a41, a42, a43, a44)</code></pre>
+
+<p>Set the full 16 elements of the 4x4 matrix, arguments in row major order.
+The elements are specified in row major order.</p>
+</div>
+<h3>toFloat32Array</h3>
+<div class="fbody">
+
+<pre class="proto"><code>Float32Array toFloat32Array()</code></pre>
+
+<p>Return a Float32Array in suitable column major order for WebGL.</p>
+</div>
+<h3>translate</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this translate(x, y, z)</code></pre>
+
+<p>Multiply by a translation of x, y, and z.</p>
+</div>
+<h3>transpose</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this transpose()</code></pre>
+
+<p>Transpose the matrix, rows become columns and columns become rows.</p>
+</div>
+<h1>NSOpenGLContext</h1>
+<h3>NSOpenGLContext</h3>
+<div class="fbody">
+</div>
+<h3>activeTexture<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void activeTexture(GLenum texture)</code></pre>
+</div>
+<h3>attachShader<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void attachShader(WebGLProgram program, WebGLShader shader)</code></pre>
+</div>
+<h3>bindAttribLocation<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void bindAttribLocation(WebGLProgram program, GLuint index, DOMString name)</code></pre>
+</div>
+<h3>bindBuffer<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void bindBuffer(GLenum target, WebGLBuffer buffer)</code></pre>
+</div>
+<h3>bindFramebuffer<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void bindFramebuffer(GLenum target, WebGLFramebuffer framebuffer)</code></pre>
+</div>
+<h3>bindRenderbuffer<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void bindRenderbuffer(GLenum target, WebGLRenderbuffer renderbuffer)</code></pre>
+</div>
+<h3>bindTexture<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void bindTexture(GLenum target, WebGLTexture texture)</code></pre>
+</div>
+<h3>bindVertexArray<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/">WebGL 2.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void bindVertexArray(WebGLVertexArrayObject? vertexArray)</code></pre>
+</div>
+<h3>blendColor<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void blendColor(GLclampf red, GLclampf green,
+                GLclampf blue, GLclampf alpha)</code></pre>
+</div>
+<h3>blendEquation<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void blendEquation(GLenum mode)</code></pre>
+</div>
+<h3>blendEquationSeparate<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void blendEquationSeparate(GLenum modeRGB, GLenum modeAlpha)</code></pre>
+</div>
+<h3>blendFunc<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void blendFunc(GLenum sfactor, GLenum dfactor)</code></pre>
+</div>
+<h3>blendFuncSeparate<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void blendFuncSeparate(GLenum srcRGB, GLenum dstRGB,
+                       GLenum srcAlpha, GLenum dstAlpha)</code></pre>
+</div>
+<h3>blit</h3>
+<div class="fbody">
+</div>
+<h3>blitFramebuffer<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/">WebGL 2.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void blitFramebuffer(GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1,
+                     GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1,
+                     GLbitfield mask, GLenum filter)</code></pre>
+</div>
+<h3>bufferData<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void bufferData(GLenum target, GLsizei size, GLenum usage)
+void bufferData(GLenum target, ArrayBufferView data, GLenum usage)
+void bufferData(GLenum target, ArrayBuffer data, GLenum usage)</code></pre>
+</div>
+<h3>bufferSubData<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void bufferSubData(GLenum target, GLsizeiptr offset, ArrayBufferView data)
+void bufferSubData(GLenum target, GLsizeiptr offset, ArrayBuffer data)</code></pre>
+</div>
+<h3>checkFramebufferStatus<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>GLenum checkFramebufferStatus(GLenum target)</code></pre>
+</div>
+<h3>clear<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void clear(GLbitfield mask)</code></pre>
+</div>
+<h3>clearColor<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void clearColor(GLclampf red, GLclampf green,
+                GLclampf blue, GLclampf alpha)</code></pre>
+</div>
+<h3>clearDepth<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void clearDepth(GLclampf depth)</code></pre>
+</div>
+<h3>clearStencil<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void clearStencil(GLint s)</code></pre>
+</div>
+<h3>colorMask<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void colorMask(GLboolean red, GLboolean green,
+               GLboolean blue, GLboolean alpha)</code></pre>
+</div>
+<h3>compileShader<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void compileShader(WebGLShader shader)</code></pre>
+</div>
+<h3>createBuffer<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>WebGLBuffer createBuffer()</code></pre>
+</div>
+<h3>createFramebuffer<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>WebGLFramebuffer createFramebuffer()</code></pre>
+</div>
+<h3>createProgram<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>WebGLProgram createProgram()</code></pre>
+</div>
+<h3>createRenderbuffer<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>WebGLRenderbuffer createRenderbuffer()</code></pre>
+</div>
+<h3>createShader<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>WebGLShader createShader(GLenum type)</code></pre>
+</div>
+<h3>createSyphonClient</h3>
+<div class="fbody">
+</div>
+<h3>createSyphonServer</h3>
+<div class="fbody">
+</div>
+<h3>createTexture<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>WebGLTexture createTexture()</code></pre>
+</div>
+<h3>createVertexArray<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/">WebGL 2.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>WebGLVertexArrayObject? createVertexArray()</code></pre>
+</div>
+<h3>cullFace<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void cullFace(GLenum mode)</code></pre>
+</div>
+<h3>deleteBuffer<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void deleteBuffer(WebGLBuffer buffer)</code></pre>
+</div>
+<h3>deleteFramebuffer<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void deleteFramebuffer(WebGLFramebuffer framebuffer)</code></pre>
+</div>
+<h3>deleteProgram<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void deleteProgram(WebGLProgram program)</code></pre>
+</div>
+<h3>deleteRenderbuffer<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void deleteRenderbuffer(WebGLRenderbuffer renderbuffer)</code></pre>
+</div>
+<h3>deleteShader<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void deleteShader(WebGLShader shader)</code></pre>
+</div>
+<h3>deleteTexture<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void deleteTexture(WebGLTexture texture)</code></pre>
+</div>
+<h3>deleteVertexArray<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/">WebGL 2.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void deleteVertexArray(WebGLVertexArrayObject? vertexArray)</code></pre>
+</div>
+<h3>depthFunc<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void depthFunc(GLenum func)</code></pre>
+</div>
+<h3>depthMask<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void depthMask(GLboolean flag)</code></pre>
+</div>
+<h3>depthRange<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void depthRange(GLclampf zNear, GLclampf zFar)</code></pre>
+</div>
+<h3>detachShader<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void detachShader(WebGLProgram program, WebGLShader shader)</code></pre>
+</div>
+<h3>disable<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void disable(GLenum cap)</code></pre>
+</div>
+<h3>disableVertexAttribArray<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void disableVertexAttribArray(GLuint index)</code></pre>
+</div>
+<h3>drawArrays<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void drawArrays(GLenum mode, GLint first, GLsizei count)</code></pre>
+</div>
+<h3>drawArraysInstanced<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/">WebGL 2.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void drawArraysInstanced(GLenum mode, GLint first, GLsizei count, GLsizei instanceCount)</code></pre>
+</div>
+<h3>drawBuffers<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/">WebGL 2.0</a>]</span></h3>
+<div class="fbody">
+
+<p>void DrawBuffersARB(sizei n, const enum *bufs);</p>
+</div>
+<h3>drawElements<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void drawElements(GLenum mode, GLsizei count,
+                  GLenum type, GLsizeiptr offset)</code></pre>
+</div>
+<h3>drawElementsInstanced<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/">WebGL 2.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void drawElementsInstanced(GLenum mode, GLsizei count,
+                           GLenum type, GLintptr offset,
+                           GLsizei instanceCount)</code></pre>
+</div>
+<h3>drawRangeElements<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/">WebGL 2.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void drawRangeElements(GLenum mode,
+                       GLuint start, GLuint end,
+                       GLsizei count, GLenum type, GLintptr offset)</code></pre>
+</div>
+<h3>drawSkCanvas</h3>
+<div class="fbody">
+</div>
+<h3>enable<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void enable(GLenum cap)</code></pre>
+</div>
+<h3>enableVertexAttribArray<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void enableVertexAttribArray(GLuint index)</code></pre>
+</div>
+<h3>finish<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void finish()</code></pre>
+</div>
+<h3>flush<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void flush()</code></pre>
+</div>
+<h3>framebufferRenderbuffer<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void framebufferRenderbuffer(GLenum target, GLenum attachment,
+                             GLenum renderbuffertarget,
+                             WebGLRenderbuffer renderbuffer)</code></pre>
+</div>
+<h3>framebufferTexture2D<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void framebufferTexture2D(GLenum target, GLenum attachment,
+                          GLenum textarget, WebGLTexture texture,
+                          GLint level)</code></pre>
+</div>
+<h3>frontFace<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void frontFace(GLenum mode)</code></pre>
+</div>
+<h3>generateMipmap<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void generateMipmap(GLenum target)</code></pre>
+</div>
+<h3>getActiveAttrib<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>WebGLActiveInfo getActiveAttrib(WebGLProgram program, GLuint index)</code></pre>
+</div>
+<h3>getActiveUniform<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>WebGLActiveInfo getActiveUniform(WebGLProgram program, GLuint index)</code></pre>
+</div>
+<h3>getAttachedShaders<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>WebGLShader[ ] getAttachedShaders(WebGLProgram program)</code></pre>
+</div>
+<h3>getAttribLocation<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>GLint getAttribLocation(WebGLProgram program, DOMString name)</code></pre>
+</div>
+<h3>getBufferParameter<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>any getBufferParameter(GLenum target, GLenum pname)</code></pre>
+</div>
+<h3>getError<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>GLenum getError()</code></pre>
+</div>
+<h3>getFramebufferAttachmentParameter<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>any getFramebufferAttachmentParameter(GLenum target, GLenum attachment,
+                                      GLenum pname)</code></pre>
+</div>
+<h3>getParameter<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>any getParameter(GLenum pname)</code></pre>
+</div>
+<h3>getProgramInfoLog<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>DOMString getProgramInfoLog(WebGLProgram program)</code></pre>
+</div>
+<h3>getProgramParameter<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>any getProgramParameter(WebGLProgram program, GLenum pname)</code></pre>
+</div>
+<h3>getShaderInfoLog<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>DOMString getShaderInfoLog(WebGLShader shader)</code></pre>
+</div>
+<h3>getShaderParameter<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>any getShaderParameter(WebGLShader shader, GLenum pname)</code></pre>
+</div>
+<h3>getShaderSource<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>DOMString getShaderSource(WebGLShader shader)</code></pre>
+</div>
+<h3>getTexParameter<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>any getTexParameter(GLenum target, GLenum pname)</code></pre>
+</div>
+<h3>getUniform<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>any getUniform(WebGLProgram program, WebGLUniformLocation location)</code></pre>
+</div>
+<h3>getUniformLocation<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>WebGLUniformLocation getUniformLocation(WebGLProgram program,
+                                        DOMString name)</code></pre>
+</div>
+<h3>hint<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void hint(GLenum target, GLenum mode)</code></pre>
+</div>
+<h3>isBuffer<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>GLboolean isBuffer(WebGLBuffer buffer)</code></pre>
+</div>
+<h3>isEnabled<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>GLboolean isEnabled(GLenum cap)</code></pre>
+</div>
+<h3>isFramebuffer<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>GLboolean isFramebuffer(WebGLFramebuffer framebuffer)</code></pre>
+</div>
+<h3>isProgram<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>GLboolean isProgram(WebGLProgram program)</code></pre>
+</div>
+<h3>isRenderbuffer<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>GLboolean isRenderbuffer(WebGLRenderbuffer renderbuffer)</code></pre>
+</div>
+<h3>isShader<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>GLboolean isShader(WebGLShader shader)</code></pre>
+</div>
+<h3>isTexture<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>GLboolean isTexture(WebGLTexture texture)</code></pre>
+</div>
+<h3>isVertexArray<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/">WebGL 2.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>GLboolean isVertexArray(WebGLVertexArrayObject? vertexArray)</code></pre>
+</div>
+<h3>lineWidth<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void lineWidth(GLfloat width)</code></pre>
+</div>
+<h3>linkProgram<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void linkProgram(WebGLProgram program)</code></pre>
+</div>
+<h3>makeCurrentContext</h3>
+<div class="fbody">
+</div>
+<h3>pixelStorei<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void pixelStorei(GLenum pname, GLint param)</code></pre>
+</div>
+<h3>polygonOffset<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void polygonOffset(GLfloat factor, GLfloat units)</code></pre>
+</div>
+<h3>readPixels<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void readPixels(GLint x, GLint y, GLsizei width, GLsizei height,
+                GLenum format, GLenum type, ArrayBufferView pixels)</code></pre>
+</div>
+<h3>renderbufferStorage<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void renderbufferStorage(GLenum target, GLenum internalformat,
+                         GLsizei width, GLsizei height)</code></pre>
+</div>
+<h3>renderbufferStorageMultisample<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/">WebGL 2.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void renderbufferStorageMultisample(GLenum target, GLsizei samples,
+                                    GLenum internalformat,
+                                    GLsizei width, GLsizei height)</code></pre>
+</div>
+<h3>sampleCoverage<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void sampleCoverage(GLclampf value, GLboolean invert)</code></pre>
+</div>
+<h3>scissor<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void scissor(GLint x, GLint y, GLsizei width, GLsizei height)</code></pre>
+</div>
+<h3>setSwapInterval</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void setSwapInterval(int interval)</code></pre>
+
+<p>Sets the swap interval, aka vsync.  Ex: <code>1</code> for vsync and <code>0</code> for no sync.
+This will normally be handled for you by the simpleWindow <code>vsync</code> setting.</p>
+</div>
+<h3>shaderSource<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void shaderSource(WebGLShader shader, DOMString source)</code></pre>
+</div>
+<h3>stencilFunc<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void stencilFunc(GLenum func, GLint ref, GLuint mask)</code></pre>
+</div>
+<h3>stencilFuncSeparate<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void stencilFuncSeparate(GLenum face, GLenum func, GLint ref, GLuint mask)</code></pre>
+</div>
+<h3>stencilMask<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void stencilMask(GLuint mask)</code></pre>
+</div>
+<h3>stencilMaskSeparate<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void stencilMaskSeparate(GLenum face, GLuint mask)</code></pre>
+</div>
+<h3>stencilOp<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void stencilOp(GLenum fail, GLenum zfail, GLenum zpass)</code></pre>
+</div>
+<h3>stencilOpSeparate<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void stencilOpSeparate(GLenum face, GLenum fail,
+                       GLenum zfail, GLenum zpass)</code></pre>
+</div>
+<h3>texImage2D<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void texImage2D(GLenum target, GLint level, GLenum internalformat,
+                GLsizei width, GLsizei height, GLint border,
+                GLenum format, GLenum type, ArrayBufferView pixels)
+void texImage2D(GLenum target, GLint level, GLenum internalformat,
+                GLenum format, GLenum type, ImageData pixels)
+void texImage2D(GLenum target, GLint level, GLenum internalformat,
+                GLenum format, GLenum type, HTMLImageElement image)
+void texImage2D(GLenum target, GLint level, GLenum internalformat,
+                GLenum format, GLenum type, HTMLCanvasElement canvas)
+void texImage2D(GLenum target, GLint level, GLenum internalformat,
+                GLenum format, GLenum type, HTMLVideoElement video)</code></pre>
+</div>
+<h3>texImage2DSkCanvasB</h3>
+<div class="fbody">
+</div>
+<h3>texParameterf<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void texParameterf(GLenum target, GLenum pname, GLfloat param)</code></pre>
+</div>
+<h3>texParameteri<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void texParameteri(GLenum target, GLenum pname, GLint param)</code></pre>
+</div>
+<h3>texSubImage2D<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+</div>
+<h3>uniform1f<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void uniform1f(WebGLUniformLocation location, GLfloat x)</code></pre>
+</div>
+<h3>uniform1fv<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void uniform1fv(WebGLUniformLocation location, Float32Array v)
+void uniform1fv(WebGLUniformLocation location, sequence v)</code></pre>
+</div>
+<h3>uniform1i<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void uniform1i(WebGLUniformLocation location, GLint x)</code></pre>
+</div>
+<h3>uniform1iv<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void uniform1iv(WebGLUniformLocation location, Int32Array v)
+void uniform1iv(WebGLUniformLocation location, sequence v)</code></pre>
+</div>
+<h3>uniform2f<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void uniform2f(WebGLUniformLocation location, GLfloat x, GLfloat y)</code></pre>
+</div>
+<h3>uniform2fv<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void uniform2fv(WebGLUniformLocation location, Float32Array v)
+void uniform2fv(WebGLUniformLocation location, sequence v)</code></pre>
+</div>
+<h3>uniform2i<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void uniform2i(WebGLUniformLocation location, GLint x, GLint y)</code></pre>
+</div>
+<h3>uniform2iv<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void uniform2iv(WebGLUniformLocation location, Int32Array v)
+void uniform2iv(WebGLUniformLocation location, sequence v)</code></pre>
+</div>
+<h3>uniform3f<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void uniform3f(WebGLUniformLocation location, GLfloat x, GLfloat y,
+               GLfloat z)</code></pre>
+</div>
+<h3>uniform3fv<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void uniform3fv(WebGLUniformLocation location, Float32Array v)
+void uniform3fv(WebGLUniformLocation location, sequence v)</code></pre>
+</div>
+<h3>uniform3i<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void uniform3i(WebGLUniformLocation location, GLint x, GLint y, GLint z)</code></pre>
+</div>
+<h3>uniform3iv<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void uniform3iv(WebGLUniformLocation location, Int32Array v)
+void uniform3iv(WebGLUniformLocation location, sequence v)</code></pre>
+</div>
+<h3>uniform4f<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void uniform4f(WebGLUniformLocation location, GLfloat x, GLfloat y,
+               GLfloat z, GLfloat w)</code></pre>
+</div>
+<h3>uniform4fv<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void uniform4fv(WebGLUniformLocation location, Float32Array v)
+void uniform4fv(WebGLUniformLocation location, sequence v)</code></pre>
+</div>
+<h3>uniform4i<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void uniform4i(WebGLUniformLocation location, GLint x, GLint y,
+               GLint z, GLint w)</code></pre>
+</div>
+<h3>uniform4iv<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void uniform4iv(WebGLUniformLocation location, Int32Array v)
+void uniform4iv(WebGLUniformLocation location, sequence v)</code></pre>
+</div>
+<h3>uniformMatrix2fv<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void uniformMatrix2fv(WebGLUniformLocation location, GLboolean transpose,
+                      Float32Array value)
+void uniformMatrix2fv(WebGLUniformLocation location, GLboolean transpose,
+                      sequence value)</code></pre>
+</div>
+<h3>uniformMatrix3fv<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void uniformMatrix3fv(WebGLUniformLocation location, GLboolean transpose,
+                      Float32Array value)
+void uniformMatrix3fv(WebGLUniformLocation location, GLboolean transpose,
+                      sequence value)</code></pre>
+</div>
+<h3>uniformMatrix4fv<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void uniformMatrix4fv(WebGLUniformLocation location, GLboolean transpose,
+                      Float32Array value)
+void uniformMatrix4fv(WebGLUniformLocation location, GLboolean transpose,
+                      sequence value)</code></pre>
+</div>
+<h3>useProgram<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void useProgram(WebGLProgram program)</code></pre>
+</div>
+<h3>validateProgram<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void validateProgram(WebGLProgram program)</code></pre>
+</div>
+<h3>vertexAttrib1f<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void vertexAttrib1f(GLuint indx, GLfloat x)
+void vertexAttrib1fv(GLuint indx, Float32Array values)
+void vertexAttrib1fv(GLuint indx, sequence values)</code></pre>
+</div>
+<h3>vertexAttrib2f<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void vertexAttrib2f(GLuint indx, GLfloat x, GLfloat y)
+void vertexAttrib2fv(GLuint indx, Float32Array values)
+void vertexAttrib2fv(GLuint indx, sequence values)</code></pre>
+</div>
+<h3>vertexAttrib3f<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void vertexAttrib3f(GLuint indx, GLfloat x, GLfloat y, GLfloat z)
+void vertexAttrib3fv(GLuint indx, Float32Array values)
+void vertexAttrib3fv(GLuint indx, sequence values)</code></pre>
+</div>
+<h3>vertexAttrib4f<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void vertexAttrib4f(GLuint indx, GLfloat x, GLfloat y,
+                    GLfloat z, GLfloat w)
+void vertexAttrib4fv(GLuint indx, Float32Array values)
+void vertexAttrib4fv(GLuint indx, sequence values)</code></pre>
+</div>
+<h3>vertexAttribDivisor<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/">WebGL 2.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void vertexAttribDivisor(GLuint index, GLuint divisor)</code></pre>
+</div>
+<h3>vertexAttribPointer<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void vertexAttribPointer(GLuint indx, GLint size, GLenum type,
+                         GLboolean normalized, GLsizei stride,
+                         GLsizeiptr offset)</code></pre>
+</div>
+<h3>viewport<span class="gllink">[<a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/">WebGL 1.0</a>]</span></h3>
+<div class="fbody">
+
+<pre class="proto"><code>void viewport(GLint x, GLint y, GLsizei width, GLsizei height)</code></pre>
+</div>
+<h3>writeImage</h3>
+<div class="fbody">
+</div>
+<h1>NSWindow</h1>
+<h3>NSWindow</h3>
+<div class="fbody">
+</div>
+<h3>center</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void center()</code></pre>
+
+<p>Position the window in the center of the screen.</p>
+</div>
+<h3>hide</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void hide()</code></pre>
+
+<p>Hide the window.</p>
+</div>
+<h3>hideCursor</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void hideCursor()</code></pre>
+
+<p>Hide the cursor.</p>
+</div>
+<h3>screenSize</h3>
+<div class="fbody">
+
+<pre class="proto"><code>object screenSize()</code></pre>
+
+<p>Returns an object {width: float, height: float} of the screen size of the
+main screen the window is currently on.</p>
+</div>
+<h3>screensInfo</h3>
+<div class="fbody">
+
+<pre class="proto"><code>object[ ] screensInfo()</code></pre>
+
+<p>Returns an array of objects representing info about each screen.  The
+objects have {id: int, width: float, height: float, highdpi: float}.</p>
+</div>
+<h3>setEventCallback</h3>
+<div class="fbody">
+
+<p>You should only really call this once, it's a pretty raw function.</p>
+</div>
+<h3>setFrameTopLeftPoint</h3>
+<div class="fbody">
+</div>
+<h3>setTitle</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void setTitle(string title)</code></pre>
+
+<p>Sets the title shown in the frame at the top of the window.</p>
+</div>
+<h3>show</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void show()</code></pre>
+
+<p>Un-hide the window.</p>
+</div>
+<h3>showCursor</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void showCursor()</code></pre>
+
+<p>Un-hide the cursor.</p>
+</div>
+<h1>SkCanvas</h1>
+<h3>SkCanvas</h3>
+<div class="fbody">
+</div>
+<h3>clear</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void clear(r, g, b, a)</code></pre>
+
+<p>Sets the entire canvas to a uniform color.</p>
+</div>
+<h3>clipPath</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void clipPath(path)</code></pre>
+
+<p>Set the clipping path to the SkPath object <code>path</code>.  Setting the clipping path
+will prevent any pixels to be drawn outside of this path.</p>
+
+<p>The save() and restore() functions are the best way to manage or reset the
+clipping path.</p>
+</div>
+<h3>clipRect</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void clipRect(left, top, right, bottom)</code></pre>
+
+<p>Set the clipping path to the rectangle of the upper-left and bottom-right
+corners specified.  Setting the clipping path will prevent any pixels to be
+drawn outside of this path.</p>
+
+<p>The save() and restore() functions are the best way to manage or reset the
+clipping path.</p>
+</div>
+<h3>concatMatrix</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void concatMatrix(a, b, c, d, e, f, g, h, i)</code></pre>
+
+<p>Preconcat the current matrix with the specified matrix.</p>
+</div>
+<h3>drawCanvas</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void drawCanvas(paint, source, dst_left, dst_top, dst_right, dst_bottom, src_left, src_top, src_right, src_bottom)</code></pre>
+
+<p>Draw one canvas on to another canvas.  The <code>paint</code> object controls settings
+involved in the drawing, such as anti-aliasing.  The <code>source</code> parameter is the
+source canvas to be drawn from.  The first four parameters define the rectangle
+within the destination canvas that the image will be drawn.  The last four
+parameters specify the rectangle within the source image.  This allows for
+drawing portions of the source image, scaling, etc.</p>
+
+<p>The last four parameters are optional, and will default to the entire source
+image (0, 0, source.width, source.height).</p>
+
+<pre><code>var img = plask.SkCanvas.createFromImage('tex.png');  // Size 100x150.
+// Draw the texture image scaled 2x larger.
+canvas.drawCanvas(paint, img,
+                  0, 0, 200, 300,  // Draw at (0, 0) size 200x300.
+                  0, 0, 100, 150)  // Draw the entire source image.</code></pre>
+</div>
+<h3>drawCircle</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void drawCircle(paint, x, y, radius)</code></pre>
+
+<p>Draw a circle centered at (<code>x</code>, <code>y</code>) of radius <code>radius</code>.</p>
+</div>
+<h3>drawColor</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void drawColor(r, g, b, a, blendmode)</code></pre>
+
+<p>Fill the entire canvas with a solid color.  If <code>blendmode</code> is not specified,
+it defaults to SrcOver, which will blend with anything already on the canvas.</p>
+
+<p>Use eraseColor() when you do not need any alpha blending.</p>
+</div>
+<h3>drawLine</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void drawLine(paint, x0, y0, x1, y1)</code></pre>
+
+<p>Draw a line between (<code>x0</code>, <code>y0</code>) and (<code>x1</code>, <code>y1</code>).</p>
+</div>
+<h3>drawPaint</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void drawPaint(paint)</code></pre>
+
+<p>Fill the entire canvas with a solid color, specified by the paint's color and
+blending mode.</p>
+</div>
+<h3>drawPath</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void drawPath(paint, path)</code></pre>
+
+<p>Draw an SkPath.  The path will be stroked or filled depending on the paint's
+style (see SkPaint#setStyle).</p>
+</div>
+<h3>drawPoints</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void drawPoints(paint, mode, points)</code></pre>
+
+<p>An optimized drawing path for many points, lines, or polygons with many points.
+The <code>mode</code> parameter is one of kPointsPointMode, kLinesPointMode, or
+kPolygonPointMode.  The <code>points</code> parameter is an array of points, in the form
+of [x0, y0, x1, y1, ...].</p>
+</div>
+<h3>drawRect</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void drawRect(paint, left, top, right, bottom)</code></pre>
+
+<p>Draw a rectangle specified by the upper-left and bottom-right corners.</p>
+</div>
+<h3>drawRoundRect</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void drawRoundRect(paint, left, top, right, bottom, xradius, yradius)</code></pre>
+
+<p>Draw a rectangle with rounded corners of radius <code>xradius</code> and <code>yradius</code>.</p>
+</div>
+<h3>drawText</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void drawText(paint, str, x, y)</code></pre>
+
+<p>Draw the string <code>str</code> with the bottom left corner starting at (<code>x</code>, <code>y</code>).</p>
+</div>
+<h3>drawTextOnPathHV</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void drawTextOnPathHV(paint, path, str, hoffset, voffset)</code></pre>
+
+<p>Draw the string <code>str</code> along the path <code>path</code>, starting along the path at
+<code>hoffset</code> and above or below the path by <code>voffset</code>.</p>
+</div>
+<h3>flush</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void flush()</code></pre>
+
+<p>Flushes any pending operations to the underlying surface, for example
+when using a GPU backed canvas.  Normally this will be called for you at
+the appropriate place before drawing, so it is unlikely to call it directly.</p>
+</div>
+<h3>resetMatrix</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void resetMatrix()</code></pre>
+
+<p>Reset the transform matrix to the identity.</p>
+</div>
+<h3>restore</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void restore()</code></pre>
+
+<p>Restore the transform matrix from the matrix stack.</p>
+</div>
+<h3>rotate</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void rotate(degrees)</code></pre>
+
+<p>Rotate the canvas by <code>degrees</code> degrees (not radians).</p>
+</div>
+<h3>save</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void save()</code></pre>
+
+<p>Save the transform matrix to the matrix stack.</p>
+</div>
+<h3>scale</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void scale(x, y)</code></pre>
+
+<p>Scale the canvas by <code>x</code> and <code>y</code>.</p>
+</div>
+<h3>setMatrix</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void setMatrix(a, b, c, d, e, f, g, h, i)</code></pre>
+
+<p>Sets the the 3x3 homogeneous transformation matrix:</p>
+
+<pre><code>|a b c|
+|d e f|
+|g h i|</code></pre>
+</div>
+<h3>skew</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void skew(x, y)</code></pre>
+
+<p>Skew the canvas by <code>x</code> and <code>y</code>.</p>
+</div>
+<h3>translate</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void translate(x, y)</code></pre>
+
+<p>Translate the canvas by <code>x</code> and <code>y</code>.</p>
+</div>
+<h3>writeImage</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void writeImage(typestr, filename)</code></pre>
+
+<p>Write the current contents of the canvas as an image named <code>filename</code>.  The
+<code>typestr</code> parameter selects the image format.  Currently only 'png' is
+supported.</p>
+</div>
+<h3>writePDF</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void writePDF(filename)</code></pre>
+
+<p>Write the contents of a vector-mode SkCanvas (created with createForPDF) to the
+file named <code>filename</code>.</p>
+</div>
+<h1>SkPaint</h1>
+<h3>SkPaint</h3>
+<div class="fbody">
+</div>
+<h3>clearPathEffect</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void clearPathEffect()</code></pre>
+
+<p>Clear any path effect.</p>
+</div>
+<h3>clearShader</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void clearShader</code></pre>
+</div>
+<h3>getFillPath</h3>
+<div class="fbody">
+</div>
+<h3>getFlags</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void getFlags()</code></pre>
+
+<p>Return the paint flags.</p>
+</div>
+<h3>getFontMetrics</h3>
+<div class="fbody">
+</div>
+<h3>getStrokeCap</h3>
+<div class="fbody">
+
+<pre class="proto"><code>int getStrokeCap()</code></pre>
+
+<p>Return the current stroke cap.</p>
+</div>
+<h3>getStrokeJoin</h3>
+<div class="fbody">
+
+<pre class="proto"><code>int getStrokeJoin()</code></pre>
+
+<p>Returns the current stroke join setting.</p>
+</div>
+<h3>getStrokeMiter</h3>
+<div class="fbody">
+
+<pre class="proto"><code>float getStrokeMiter()</code></pre>
+
+<p>Returns the current stroke miter setting.</p>
+</div>
+<h3>getStrokeWidth</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void getStrokeWidth()</code></pre>
+
+<p>Return the current stroke width.</p>
+</div>
+<h3>getStyle</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void getStyle()</code></pre>
+
+<p>Return the current style.</p>
+</div>
+<h3>getTextPath</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void getTextPath(text, x, y, path)</code></pre>
+</div>
+<h3>measureText</h3>
+<div class="fbody">
+
+<pre class="proto"><code>float measureText(string text)</code></pre>
+
+<p>Measure the x-advance for the string <code>text</code> using the current
+paint settings.</p>
+</div>
+<h3>measureTextBounds</h3>
+<div class="fbody">
+
+<pre class="proto"><code>float[ ] measureTextBounds(string text)</code></pre>
+
+<p>Returns an array of the bounds [left, top, right, bottom] for <code>text</code>.</p>
+</div>
+<h3>reset</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void reset()</code></pre>
+
+<p>Reset the paint to the default settings.</p>
+</div>
+<h3>setAntiAlias</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void setAntiAlias(bool aa)</code></pre>
+</div>
+<h3>setAutohinted</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void setAutohinted(bool autohint)</code></pre>
+</div>
+<h3>setColor</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void setColor(r, g, b, a)</code></pre>
+
+<p>Set the paint color, values are integers in the range of 0 to 255.</p>
+</div>
+<h3>setColorHSV</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void setColorHSV(h, s, v, a)</code></pre>
+
+<p>Set the paint color from HSV values, the HSV values are floating point, hue
+from 0 to 360, and saturation and value from 0 to 1.  The alpha value is an
+integer in the range of 0 to 255.</p>
+</div>
+<h3>setDashPathEffect</h3>
+<div class="fbody">
+</div>
+<h3>setDevKernText</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void setDevKernText(bool devkern)</code></pre>
+</div>
+<h3>setDither</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void setDither(bool dither)</code></pre>
+</div>
+<h3>setFakeBoldText</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void setFakeBoldText(bool fakebold)</code></pre>
+</div>
+<h3>setFill</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void setFill()</code></pre>
+
+<p>Sets the current paint style to fill.</p>
+</div>
+<h3>setFillAndStroke</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void setFillAndStroke()</code></pre>
+
+<p>Sets the current paint style to fill and stroke.</p>
+</div>
+<h3>setFlags</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void setFlags(flags)</code></pre>
+
+<p>Set the paint flags, such as whether to perform anti-aliasing.</p>
+
+<pre><code>// The follow flags are supported.  They should be OR'd together to set
+// multiple settings.
+//   kAntiAliasFlag
+//   kFilterBitmapFlag
+//   kDitherFlag
+//   kUnderlineTextFlag
+//   kStrikeThruTextFlag
+//   kFakeBoldTextFlag
+//   kLinearTextFlag
+//   kSubpixelTextFlag
+//   kDevKernTextFlag
+
+paint.setFlags(paint.kAntiAliasFlag | paint.kFilterBitmapFlag);</code></pre>
+</div>
+<h3>setFontFamily</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void setFontFamily(family)</code></pre>
+
+<p>Set the text font family.</p>
+</div>
+<h3>setFontFamilyPostScript</h3>
+<div class="fbody">
+</div>
+<h3>setLCDRenderText</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void setLCDRenderText(bool lcd)</code></pre>
+</div>
+<h3>setLinearGradientShader</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void setLinearGradientShader</code></pre>
+</div>
+<h3>setRadialGradientShader</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void setRadialGradientShader</code></pre>
+</div>
+<h3>setStrikeThruText</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void setStrikeThruText(bool strike)</code></pre>
+</div>
+<h3>setStroke</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void setStroke()</code></pre>
+
+<p>Sets the current paint style to stroke.</p>
+</div>
+<h3>setStrokeCap</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void setStrokeCap(int cap)</code></pre>
+
+<p>Set the stroke cap.</p>
+
+<pre><code>// The follow caps are supported:
+//   kButtCap
+//   kRoundCap
+//   kSquareCap
+//   kDefaultCap
+
+paint.setStrokeCape(paint.kRoundCap);</code></pre>
+</div>
+<h3>setStrokeJoin</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void setStrokeJoin(int join)</code></pre>
+</div>
+<h3>setStrokeMiter</h3>
+<div class="fbody">
+
+<pre class="proto"><code>float setStrokeMiter(float miter)</code></pre>
+</div>
+<h3>setStrokeWidth</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void setStrokeWidth(width)</code></pre>
+
+<p>Set the current stroke width to the floating point value <code>width</code>.  A width of
+0 causes Skia to draw in a special 'hairline' stroking mode.</p>
+</div>
+<h3>setStyle</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void setStyle(style)</code></pre>
+
+<p>Set the paint style, for example whether to stroke, fill, or both.</p>
+
+<pre><code>// The follow styles are supported:
+//   kFillStyle
+//   kStrokeStyle
+//   kStrokeAndFillStyle
+
+paint.setStyle(paint.kStrokeStyle);</code></pre>
+</div>
+<h3>setSubpixelText</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void setSubpixelText(bool subpixel)</code></pre>
+</div>
+<h3>setTextSize</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void setTextSize(size)</code></pre>
+
+<p>Set the text size.</p>
+</div>
+<h3>setUnderlineText</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void setUnderlineText(bool underline)</code></pre>
+</div>
+<h3>setXfermodeMode</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void setXfermodeMode(mode)</code></pre>
+
+<p>Set the alpha blending (porter duff transfer) mode.</p>
+
+<pre><code>// The following blending modes are supported:
+//   kClearMode
+//   kSrcMode
+//   kDstMode
+//   kSrcOverMode
+//   kDstOverMode
+//   kSrcInMode
+//   kDstInMode
+//   kSrcOutMode
+//   kDstOutMode
+//   kSrcATopMode
+//   kDstATopMode
+//   kXorMode
+//   kPlusMode
+//   kMultiplyMode
+//   kScreenMode
+//   kOverlayMode
+//   kDarkenMode
+//   kLightenMode
+//   kColorDodgeMode
+//   kColorBurnMode
+//   kHardLightMode
+//   kSoftLightMode
+//   kDifferenceMode
+//   kExclusionMode
+
+paint.setXfermodeMode(paint.kPlusMode);  // Additive blending.</code></pre>
+</div>
+<h1>SkPath</h1>
+<h3>SkPath</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void SkPath(SkPath? path_to_copy)</code></pre>
+
+<p>Construct a new path object, optionally based off of an existing path.</p>
+</div>
+<h3>addCircle</h3>
+<div class="fbody">
+</div>
+<h3>addOval</h3>
+<div class="fbody">
+</div>
+<h3>addRect</h3>
+<div class="fbody">
+</div>
+<h3>arcTo</h3>
+<div class="fbody">
+</div>
+<h3>arct</h3>
+<div class="fbody">
+</div>
+<h3>close</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void close()</code></pre>
+
+<p>Close the path, connecting the path to the beginning.</p>
+</div>
+<h3>cubicTo</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void cubicTo(c0x, c0y, c1x, c1y, ex, ey)</code></pre>
+
+<p>A cubic bezier curve with control points (<code>c0x</code>, <code>c0y</code>) and (<code>c1x</code>, <code>c1y</code>) and
+endpoint (<code>ex</code>, <code>ey</code>).</p>
+</div>
+<h3>getBounds</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void getBounds()</code></pre>
+
+<p>Returns an array of [left, top, right, bottom], the bounding rectangle of the
+path.</p>
+</div>
+<h3>lineTo</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void lineTo(x, y)</code></pre>
+
+<p>Line to (<code>x</code>, <code>y</code>).</p>
+</div>
+<h3>moveTo</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void moveTo(x, y)</code></pre>
+
+<p>Move to (<code>x</code>, <code>y</code>).</p>
+</div>
+<h3>offset</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void offset(x, y)</code></pre>
+
+<p>Offset the path by (<code>x</code>, <code>y</code>).</p>
+</div>
+<h3>quadTo</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void quadTo(cx, cy, ex, ey)</code></pre>
+
+<p>A quadratic bezier curve with control point (<code>cx</code>, <code>cy</code>) and endpoint (<code>ex</code>,
+<code>ey</code>).</p>
+</div>
+<h3>rLineTo</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void rLineTo(rx, ry)</code></pre>
+
+<p>Similar to lineTo(), except <code>rx</code> and <code>ry</code> are relative to the previous point.</p>
+</div>
+<h3>reset</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void reset()</code></pre>
+
+<p>Reset the path to an empty path.</p>
+</div>
+<h3>rewind</h3>
+<div class="fbody">
+
+<pre class="proto"><code>void rewind()</code></pre>
+
+<p>Reset the path to an empty path, but keeping the internal memory previously
+allocated for the point storage.</p>
+</div>
+<h3>toSVGString</h3>
+<div class="fbody">
+
+<pre class="proto"><code>string toSVGString()</code></pre>
+
+<p>Returns the path as a SVG path data representation.</p>
+</div>
+<h1>Vec2</h1>
+<h3>Vec2</h3>
+<div class="fbody">
+
+<pre class="proto"><code>new Vec2(x, y)</code></pre>
+
+<p>Constructs a 2d vector (x, y).</p>
+</div>
+<h3>add</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this add(Vec2 b)</code></pre>
+
+<p>Add a Vec2, this = this + b.</p>
+</div>
+<h3>add2</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this add2(Vec2 a, Vec2 b)</code></pre>
+
+<p>Add two Vec2s, this = a + b.</p>
+</div>
+<h3>added</h3>
+<div class="fbody">
+
+<pre class="proto"><code>Vec2 added(Vec2 b)</code></pre>
+
+<p>Add a Vec2, returning the result as a new Vec2.</p>
+</div>
+<h3>debugString</h3>
+<div class="fbody">
+</div>
+<h3>dist</h3>
+<div class="fbody">
+
+<pre class="proto"><code>float dist(Vec2 b)</code></pre>
+
+<p>Distance to Vec2 <code>b</code>.</p>
+</div>
+<h3>distSquared</h3>
+<div class="fbody">
+
+<pre class="proto"><code>float distSquared(Vec2 b)</code></pre>
+
+<p>Squared Distance to Vec2 <code>b</code>.</p>
+</div>
+<h3>dot</h3>
+<div class="fbody">
+
+<pre class="proto"><code>float dot(Vec2 b)</code></pre>
+
+<p>Returns the dot product, this . b.</p>
+</div>
+<h3>dup</h3>
+<div class="fbody">
+
+<pre class="proto"><code>Vec2 dup()</code></pre>
+
+<p>Return a new copy of the vector.</p>
+</div>
+<h3>length</h3>
+<div class="fbody">
+
+<pre class="proto"><code>float length()</code></pre>
+
+<p>Magnitude (length).</p>
+</div>
+<h3>lengthSquared</h3>
+<div class="fbody">
+
+<pre class="proto"><code>float lengthSquared()</code></pre>
+
+<p>Magnitude squared.</p>
+</div>
+<h3>lerp</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this lerp(Vec2 b, float t)</code></pre>
+
+<p>Interpolate between this and another Vec2 <code>b</code>, based on <code>t</code>.</p>
+</div>
+<h3>lerped</h3>
+<div class="fbody">
+
+<pre class="proto"><code>Vec2 lerped(Vec2 b, float t)</code></pre>
+</div>
+<h3>mul</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this mul(Vec2 b)</code></pre>
+
+<p>Multiply by another Vec2, this = this * b.</p>
+</div>
+<h3>mul2</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this mul2(Vec2 a, Vec2 b)</code></pre>
+
+<p>Multiply two Vec2s, this = a * b.</p>
+</div>
+<h3>mulled</h3>
+<div class="fbody">
+
+<pre class="proto"><code>Vec2 mulled(Vec2 b)</code></pre>
+</div>
+<h3>normalize</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this normalize()</code></pre>
+
+<p>Normalize, scaling so the magnitude is 1.  Invalid for a zero vector.</p>
+</div>
+<h3>normalized</h3>
+<div class="fbody">
+
+<pre class="proto"><code>Vec2 normalized()</code></pre>
+</div>
+<h3>reflect</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this reflect(Vec2 n)</code></pre>
+
+<p>Reflect a vector about the normal <code>n</code>.  The vectors should both be unit.</p>
+</div>
+<h3>reflected</h3>
+<div class="fbody">
+
+<pre class="proto"><code>Vec2 reflected(Vec2 n)</code></pre>
+</div>
+<h3>rotate</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this rotate(float theta)</code></pre>
+
+<p>Rotate around the origin by <code>theta</code> radians (counter-clockwise).</p>
+</div>
+<h3>rotated</h3>
+<div class="fbody">
+
+<pre class="proto"><code>Vec2 rotated(float theta)</code></pre>
+</div>
+<h3>scale</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this scale(float s)</code></pre>
+
+<p>Multiply by a scalar.</p>
+</div>
+<h3>scaled</h3>
+<div class="fbody">
+
+<pre class="proto"><code>Vec2 scaled(float s)</code></pre>
+</div>
+<h3>set</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this set(float x, float y)</code></pre>
+</div>
+<h3>setVec2</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this setVec2(Vec2 v)</code></pre>
+</div>
+<h3>sub</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this sub(Vec2 b)</code></pre>
+
+<p>Subtract another Vec2, this = this - b.</p>
+</div>
+<h3>sub2</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this sub2(Vec2 a, Vec2 b)</code></pre>
+
+<p>Subtract two Vec2s, this = a - b.</p>
+</div>
+<h3>subbed</h3>
+<div class="fbody">
+
+<pre class="proto"><code>Vec2 subbed(Vec2 b)</code></pre>
+</div>
+<h1>Vec3</h1>
+<h3>Vec3</h3>
+<div class="fbody">
+
+<pre class="proto"><code>new Vec3(x, y, z)</code></pre>
+
+<p>A class representing a 3 dimensional point and/or vector.  There isn't a
+good reason to differentiate between the two, and you often want to change
+how you think about the same set of values.  So there is only "vector".</p>
+
+<p>The class is designed without accessors or individual mutators, you should
+access the x, y, and z values directly on the object.</p>
+
+<p>Almost all of the core operations happen in place, writing to the current
+object.  If you want a copy, you can call <code>dup</code>.  For convenience, many
+operations have a passed-tense version that returns a new object.  Most
+methods return <code>this</code> to support chaining.</p>
+</div>
+<h3>add</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this add(Vec3 b)</code></pre>
+
+<p>Add a Vec3, this = this + b.</p>
+</div>
+<h3>add2</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this add2(Vec3 a, Vec3 b)</code></pre>
+
+<p>Add two Vec3s, this = a + b.</p>
+</div>
+<h3>added</h3>
+<div class="fbody">
+
+<pre class="proto"><code>Vec3 added(Vec3 b)</code></pre>
+</div>
+<h3>cross</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this cross(Vec3 b)</code></pre>
+
+<p>Cross product, this = this x b.</p>
+</div>
+<h3>cross2</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this cross2(Vec3 a, Vec3 b)</code></pre>
+
+<p>Cross product, this = a x b.</p>
+</div>
+<h3>debugString</h3>
+<div class="fbody">
+</div>
+<h3>dist</h3>
+<div class="fbody">
+
+<pre class="proto"><code>float dist(Vec3 b)</code></pre>
+
+<p>Distance to Vec3 <code>b</code>.</p>
+</div>
+<h3>distSquared</h3>
+<div class="fbody">
+
+<pre class="proto"><code>float distSquared(Vec3 b)</code></pre>
+
+<p>Squared Distance to Vec3 <code>b</code>.</p>
+</div>
+<h3>dot</h3>
+<div class="fbody">
+
+<pre class="proto"><code>float dot(Vec3 b)</code></pre>
+
+<p>Returns the dot product, this . b.</p>
+</div>
+<h3>dup</h3>
+<div class="fbody">
+
+<pre class="proto"><code>Vec3 dup()</code></pre>
+
+<p>Return a new copy of the vector.</p>
+</div>
+<h3>length</h3>
+<div class="fbody">
+
+<pre class="proto"><code>float length()</code></pre>
+
+<p>Magnitude (length).</p>
+</div>
+<h3>lengthSquared</h3>
+<div class="fbody">
+
+<pre class="proto"><code>float lengthSquared()</code></pre>
+
+<p>Magnitude squared.</p>
+</div>
+<h3>lerp</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this lerp(Vec3 b, float t)</code></pre>
+
+<p>Interpolate between this and another Vec3 <code>b</code>, based on <code>t</code>.</p>
+</div>
+<h3>lerped</h3>
+<div class="fbody">
+
+<pre class="proto"><code>Vec3 lerped(Vec3 b, float t)</code></pre>
+</div>
+<h3>mul</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this mul(Vec3 b)</code></pre>
+
+<p>Multiply by another Vec3, this = this * b.</p>
+</div>
+<h3>mul2</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this mul2(Vec3 a, Vec3 b)</code></pre>
+
+<p>Multiply two Vec3s, this = a * b.</p>
+</div>
+<h3>mulled</h3>
+<div class="fbody">
+
+<pre class="proto"><code>Vec3 mulled(Vec3 b)</code></pre>
+</div>
+<h3>normalize</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this normalize()</code></pre>
+
+<p>Normalize, scaling so the magnitude is 1.  Invalid for a zero vector.</p>
+</div>
+<h3>normalized</h3>
+<div class="fbody">
+
+<pre class="proto"><code>Vec3 normalized()</code></pre>
+</div>
+<h3>scale</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this scale(float s)</code></pre>
+
+<p>Multiply by a scalar.</p>
+</div>
+<h3>scaled</h3>
+<div class="fbody">
+
+<pre class="proto"><code>Vec3 scaled(float s)</code></pre>
+</div>
+<h3>set</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this set(x, y, z)</code></pre>
+</div>
+<h3>setVec3</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this setVec3(Vec3 v)</code></pre>
+</div>
+<h3>sub</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this sub(Vec3 b)</code></pre>
+
+<p>Subtract another Vec3, this = this - b.</p>
+</div>
+<h3>sub2</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this sub2(Vec3 a, Vec3 b)</code></pre>
+
+<p>Subtract two Vec3s, this = a - b.</p>
+</div>
+<h3>subbed</h3>
+<div class="fbody">
+
+<pre class="proto"><code>Vec3 subbed(Vec3 b)</code></pre>
+</div>
+<h1>Vec4</h1>
+<h3>Vec4</h3>
+<div class="fbody">
+
+<pre class="proto"><code>new Vec4(x, y, z, w)</code></pre>
+</div>
+<h3>dup</h3>
+<div class="fbody">
+
+<pre class="proto"><code>Vec4 dup()</code></pre>
+
+<p>Return a new copy of the vector.</p>
+</div>
+<h3>scale</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this scale(float s)</code></pre>
+
+<p>Multiply by a scalar.</p>
+</div>
+<h3>scaled</h3>
+<div class="fbody">
+
+<pre class="proto"><code>Vec4 scaled(float s)</code></pre>
+</div>
+<h3>set</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this set(x, y, z, w)</code></pre>
+</div>
+<h3>setVec4</h3>
+<div class="fbody">
+
+<pre class="proto"><code>this setVec4(Vec4 v)</code></pre>
+</div>
+<h3>toVec3</h3>
+<div class="fbody">
+
+<pre class="proto"><code>Vec3 toVec3()</code></pre>
+
+<p>Return a new vector of (x, y, z), dropping w.</p>
+</div>
+<h1>plask</h1>
+<h3>clamp</h3>
+<div class="fbody">
+
+<pre class="proto"><code>float clamp(float v, float vmin, float vmax)</code></pre>
+
+<p>GLSL clamp.  Keep the value <code>v</code> in the range <code>vmin</code> .. <code>vmax</code>.</p>
+</div>
+<h3>lerp</h3>
+<div class="fbody">
+
+<pre class="proto"><code>float lerp(float a, float b, float t)</code></pre>
+
+<p>Linear interpolation on the line along points (0, <code>a</code>) and (1, <code>b</code>).  The
+position <code>t</code> is the x coordinate, where 0 is <code>a</code> and 1 is <code>b</code>.</p>
+</div>
+<h3>max</h3>
+<div class="fbody">
+
+<pre class="proto"><code>float max(float a, float b)</code></pre>
+</div>
+<h3>min</h3>
+<div class="fbody">
+
+<pre class="proto"><code>float min(float a, float b)</code></pre>
+</div>
+<h3>smootherstep</h3>
+<div class="fbody">
+
+<pre class="proto"><code>float smootherstep(edge0, edge1, x)</code></pre>
+
+<p>Ken Perlin's "smoother" step function, with zero 1st and 2nd derivatives at
+the endpoints (whereas smoothstep has a 2nd derivative of +/- 6).  This is
+also for example used by Patel and Taylor in smooth simulation noise.</p>
+</div>
+<h3>smoothstep</h3>
+<div class="fbody">
+
+<pre class="proto"><code>float smoothstep(edge0, edge1, x)</code></pre>
+
+<p>GLSL smoothstep.  NOTE: Undefined if edge0 == edge1.</p>
+</div>
+  </div>
+</body>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-23909353-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</html>
+
